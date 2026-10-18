@@ -1,0 +1,57 @@
+{
+	"name": "n8n-nodes-gemini-context-cache",
+	"version": "0.1.0",
+	"description": "Explicit Gemini context caching for n8n: create, reuse, extend and query cached content so large prompts are not re-billed on every call.",
+	"license": "MIT",
+	"homepage": "https://github.com/goat255/n8n-nodes-gemini-context-cache#readme",
+	"keywords": [
+		"n8n-community-node-package",
+		"gemini",
+		"context-caching",
+		"llm",
+		"cost"
+	],
+	"author": {
+		"name": "Goutam Soni",
+		"email": "goutam@4stepai.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/goat255/n8n-nodes-gemini-context-cache.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "vitest run",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/GeminiContextCacheApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/GeminiContextCache/GeminiContextCache.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.52.5",
+		"eslint": "9.32.0",
+		"n8n-workflow": "^2.43.5",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2",
+		"vitest": "3.2.4"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

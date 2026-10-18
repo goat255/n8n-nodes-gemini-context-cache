@@ -1,0 +1,14 @@
+{
+	"node": "n8n-nodes-gemini-context-cache.geminiContextCache",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Utility"],
+	"resources": {
+		"credentialDocumentation": [
+			{ "url": "https://github.com/goat255/n8n-nodes-gemini-context-cache#credentials" }
+		],
+		"primaryDocumentation": [
+			{ "url": "https://github.com/goat255/n8n-nodes-gemini-context-cache#readme" }
+		]
+	}
+}
