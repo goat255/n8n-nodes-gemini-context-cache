@@ -15,7 +15,7 @@ gap is in the node surface, not the transport.
 |---|---|
 | Code | `packages/@n8n/nodes-langchain/nodes/vendors/GoogleGemini/helpers/interfaces.ts` declares `cachedContent?: string` on the request, but no action sets it and no operation manages caches. Neither `googleGemini` (76 properties) nor `lmChatGoogleGemini` exposes a cache parameter. |
 | Community | Forum threads such as "How can I enable context caching in Gemini?" and "Using Prompt Caching in N8N" ask for exactly this. |
-| Field | A broker's chatbot with a 627K-token catalogue: about $0.02 per chat without caching, about $0.005 with it. At 10K chats a month that is roughly $150 saved monthly on one workflow. The workaround took two extra workflows of raw HTTP calls. |
+| Field | A broker's chatbot with a 627K-token catalogue. Estimated cost with the full catalogue in context: about $0.02 per chat without caching, about $0.005 with it (roughly $150 a month saved at 10K chats). The full-context version is built but waits on the client enabling billing; the live version uses keyword section selection instead. The caching workaround took two extra workflows of raw HTTP calls. |
 
 ## What customers hit today
 
